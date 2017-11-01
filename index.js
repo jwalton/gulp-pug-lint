@@ -19,7 +19,7 @@ module.exports = function(options) {
 
         rc.for(file.path, function(errRc, conf) {
             if (errRc) {
-                cb(new gutil.PluginError('gulp-pug-lint', errRc));
+                cb(new gutil.PluginError('gulp-pug-lint2', errRc));
                 return;
             }
 
@@ -39,7 +39,7 @@ module.exports = function(options) {
                 cb();
 
             } catch (errLint) {
-                cb(new gutil.PluginError('gulp-pug-lint', errLint));
+                cb(new gutil.PluginError('gulp-pug-lint2', errLint));
                 return;
             }
         });
@@ -50,7 +50,7 @@ module.exports = function(options) {
             var _this = this;
 
             if(file.isStream()) {
-                cb(new gutil.PluginError('gulp-pug-lint', 'streaming not supported'));
+                cb(new gutil.PluginError('gulp-pug-lint2', 'streaming not supported'));
             } else if(file.isBuffer()) {
                 checkFile(file, function(err) {
                     _this.push(file);
@@ -63,7 +63,7 @@ module.exports = function(options) {
         },
         function(cb) {
             if(totalErrors > 0 && failOnError) {
-                cb(new gutil.PluginError('gulp-pug-lint', 'Failed with ' + totalErrors + ' errors'));
+                cb(new gutil.PluginError('gulp-pug-lint2', 'Failed with ' + totalErrors + ' errors'));
             } else {
                 cb();
             }

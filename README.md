@@ -14,7 +14,7 @@ npm install --save pug-lint gulp-pug-lint2
 
 ```javascript
 var gulp = require('gulp'),
-  puglint = require('gulp-pug-lint');
+  puglint = require('gulp-pug-lint2');
 
 gulp.task('default', function () {
   return gulp

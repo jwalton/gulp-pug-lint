@@ -2,8 +2,8 @@
   "name": "gulp-pug-lint2",
   "version": "0.1.6",
   "description": "Gulp plugin for pug-lint",
-  "homepage": "https://github.com/jwalton/gulp-pug-lint",
-  "repository": "git://github.com/jwalton/gulp-pug-lint.git",
+  "homepage": "https://github.com/jwalton/gulp-pug-lint2",
+  "repository": "git://github.com/jwalton/gulp-pug-lint2.git",
   "main": "index.js",
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
