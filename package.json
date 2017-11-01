@@ -1,6 +1,6 @@
 {
   "name": "gulp-pug-lint2",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Gulp plugin for pug-lint",
   "homepage": "https://github.com/jwalton/gulp-pug-lint2",
   "repository": "git://github.com/jwalton/gulp-pug-lint2.git",
