@@ -1,12 +1,14 @@
 {
-  "name": "gulp-pug-lint",
+  "name": "gulp-pug-lint2",
   "version": "0.1.6",
   "description": "Gulp plugin for pug-lint",
-  "homepage": "https://github.com/emartech/gulp-pug-lint",
-  "repository": "git://github.com/emartech/gulp-pug-lint.git",
+  "homepage": "https://github.com/jwalton/gulp-pug-lint",
+  "repository": "git://github.com/jwalton/gulp-pug-lint.git",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*.spec.js && eslint *.js"
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint --ext js *.js",
+    "test:unit": "mocha test/*.spec.js"
   },
   "keywords": [
     "gulp",
@@ -17,17 +19,18 @@
   "author": "Emarsys",
   "license": "MIT",
   "dependencies": {
-    "gulp-util": "3.0.7",
-    "pug-lint": "2.1.2",
-    "lodash": "3.10.1",
-    "rcloader": "0.1.4",
-    "through2": "2.0.0"
+    "gulp-util": "^3.0.8",
+    "rcloader": "^0.2.2",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
     "chai": "3.4.1",
-    "eslint": "1.10.3",
-    "eslint-config-emarsys": "1.0.0",
+    "eslint": "^3.19.0",
     "pug-lint-config-emarsys": "2.0.0",
-    "mocha": "2.3.4"
+    "mocha": "2.3.4",
+    "pug-lint": "^2.5.0"
+  },
+  "peerDependencies": {
+    "pug-lint": ">= 2 < 3"
   }
 }

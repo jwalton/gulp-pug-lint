@@ -10,24 +10,28 @@ module.exports = function(options) {
   var rc = new RcLoader('.pug-lintrc', options);
 
   return through.obj(function(file, enc, cb) {
+    var linter, errors;
     if (file.isNull()) {
-      return cb(null, file);
+      cb(null, file);
+      return;
     }
 
     if (file.isStream()) {
-      return cb(new gutil.PluginError('gulp-pug-lint', 'streaming not supported'));
+      cb(new gutil.PluginError('gulp-pug-lint', 'streaming not supported'));
+      return;
     }
 
     rc.for(file.path, function(errRc, conf) {
       if (errRc) {
-        return cb(new gutil.PluginError('gulp-pug-lint', errRc));
+        cb(new gutil.PluginError('gulp-pug-lint', errRc));
+        return;
       }
 
       try {
-        var linter = new PugLint();
+        linter = new PugLint();
         linter.configure(configParser(conf));
 
-        var errors = linter.checkFile(file.path);
+        errors = linter.checkFile(file.path);
 
         if (errors.length) {
           gutil.log(gutil.colors.cyan(errors.length) + ' issues found in ' + gutil.colors.magenta(file.path));
@@ -36,7 +40,8 @@ module.exports = function(options) {
           });
         }
       } catch (errLint) {
-        return cb(new gutil.PluginError('gulp-pug-lint', errLint));
+        cb(new gutil.PluginError('gulp-pug-lint', errLint));
+        return;
       }
 
       cb(null, file);
