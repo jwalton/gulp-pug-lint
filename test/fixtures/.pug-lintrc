@@ -1,0 +1,8 @@
+{
+    "disallowLegacyMixinCall": true,
+    "disallowAttributeInterpolation": true,
+    "disallowDuplicateAttributes": true,
+    "disallowTrailingSpaces": true,
+    "requireLowerCaseTags": true,
+    "requireStrictEqualityOperators": true
+}
