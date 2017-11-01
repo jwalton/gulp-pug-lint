@@ -16,5 +16,5 @@ describe('configParser', function() {
         var config = configParser({extends: 'emarsys', additionalField: 4});
 
         expect(config).to.contain(emarsysConfig);
-    })
+    });
 });
