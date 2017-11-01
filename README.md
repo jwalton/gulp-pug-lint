@@ -1,8 +1,14 @@
 # Gulp plugin for pug-lint
 
-[![npm version](https://badge.fury.io/js/gulp-pug-lint.svg)](http://badge.fury.io/js/gulp-pug-lint)
-[![Dependency Status](https://david-dm.org/emartech/gulp-pug-lint.svg)](https://david-dm.org/emartech/gulp-pug-lint)
-[![devDependency Status](https://david-dm.org/emartech/gulp-pug-lint/dev-status.svg)](https://david-dm.org/emartech/gulp-pug-lint#info=devDependencies)
+[![npm version](https://badge.fury.io/js/gulp-pug-lint2.svg)](http://badge.fury.io/js/gulp-pug-lint2)
+[![Dependency Status](https://david-dm.org/jwalton/gulp-pug-lint2.svg)](https://david-dm.org/jwalton/gulp-pug-lint2)
+[![devDependency Status](https://david-dm.org/jwalton/gulp-pug-lint2/dev-status.svg)](https://david-dm.org/jwalton/gulp-pug-lint2#info=devDependencies)
+
+## Install
+
+```
+npm install --save pug-lint gulp-pug-lint2
+```
 
 ## Usage
 
@@ -12,8 +18,8 @@ var gulp = require('gulp'),
 
 gulp.task('default', function () {
   return gulp
-    .src('views/*.jade')
-    .pipe(puglint());
+    .src('views/*.pug')
+    .pipe(puglint({failOnError: true));
 });
 ```
 

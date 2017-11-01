@@ -8,7 +8,7 @@
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint --ext js *.js",
-    "test:unit": "mocha test/*.spec.js"
+    "test:unit": "mocha test"
   },
   "keywords": [
     "gulp",
@@ -24,11 +24,12 @@
     "through2": "^2.0.3"
   },
   "devDependencies": {
-    "chai": "3.4.1",
-    "eslint": "^3.19.0",
-    "pug-lint-config-emarsys": "2.0.0",
-    "mocha": "2.3.4",
-    "pug-lint": "^2.5.0"
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "mocha": "^4.0.1",
+    "pug-lint": "^2.5.0",
+    "pug-lint-config-emarsys": "^2.0.1",
+    "vinyl": "^2.1.0"
   },
   "peerDependencies": {
     "pug-lint": ">= 2 < 3"
