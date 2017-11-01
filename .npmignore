@@ -1,3 +1,4 @@
-node_modules/
-.eslintrc
-test/*.spec.js
+/node_modules
+/.eslintrc
+/test
+/.travis.yml
